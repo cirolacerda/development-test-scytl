@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head> 
+<title>Prova Scytl - Development Test - [Ciro Lacerda]</title>
+
+<img height="90" alt="OAKS" src="Images/LOGO_HEADER.png"> </img>  <h2 align="center"> Development Test</h2>
+
+</h:head>
+
+
+
+<h:body>
+
+
+
+<h:form>
+<h:panelGrid >
+   
+   <label><b>*** OAK'S SERVER ***</b></label> <br></br>
+
+	Ip: <h:inputText value="#{protocoloxBean.ip}" id="ip"/> 
+	Porta: <h:inputText value="#{protocoloxBean.porta}" id="porta" />
+		
+	<h:commandButton value="Conectar" action="#{protocoloxBean.conectar}"/>
+</h:panelGrid>
+</h:form>
+<br></br>
+<br></br>
+
+<h3 style="color:purple;">Objetivos</h3>
+
+
+<b>1. </b>Estabeleça uma conexão com o servidor de Oak<br></br>
+<b><h:outputLabel style="color:blue;" value="#{protocoloxBean.msgConexao}" ></h:outputLabel></b><br></br>
+
+<b>2. </b>Receba pacotes codificados usando o "protocolo X"<br></br>
+<b><h:outputLabel  style="color:blue;" value="#{protocoloxBean.pacoteRecebidoStr}" ></h:outputLabel></b><br></br>
+
+<b>3. </b>Decodificar os pacotes recebidos e obter a mensagem original<br></br>
+<b><h:outputLabel  style="color:blue;" value="#{protocoloxBean.msgDecodificada}" ></h:outputLabel></b><br></br>
+
+<b>4. </b>Inverta a mensagem original<br></br>
+<b><h:outputLabel  style="color:blue;" value="#{protocoloxBean.msgInvertida}" ></h:outputLabel></b><br></br>
+
+<b>5. </b>Codificar a mensagem invertida usando o "protocolo X"<br></br>
+<b><h:outputLabel  style="color:blue;" value="#{protocoloxBean.msgCodificadaStr}" ></h:outputLabel></b><br></br>
+
+<b>6. </b>Envie os dados resultantes de volta para o servidor<br></br>
+<b><h:outputLabel  style="color:blue;" value="#{protocoloxBean.msgPacoteEnviado}" ></h:outputLabel></b><br></br>
+
+<b>7. </b>Receber mensagem de confirmação codificada usando o "protocolo X"<br></br>
+<b><h:outputLabel  style="color:blue;" value="#{protocoloxBean.msgConfirmacaoStr}" ></h:outputLabel></b><br></br>
+<br></br>
+<div align="right">
+<b>Desenvolvido por
+<a href=" mailto:cirolacerda@gmail.com" title="cirolacerda@gmail.com">CIRO LACERDA</a></b>
+</div>
+
+</h:body>
+
+
+</html>
